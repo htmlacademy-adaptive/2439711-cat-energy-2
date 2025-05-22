@@ -20,11 +20,11 @@
             <div class="header__inner">
                 <a class="header__logo logo" href="#">
                     <picture>
-                        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="70" height="59">
-                        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="60" height="50">
-                        <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+                        <source media="(min-width: 1440px)" srcset="icons/stack.svg#logo-desktop" type="image/svg+xml" width="70" height="59">
+                        <source media="(min-width: 768px)" srcset="icons/stack.svg#logo-tablet" type="image/svg+xml" width="60" height="50">
+                        <img class="logo__img" src="icons/stack.svg#logo-mobile" width="33" height="38" alt="Логотип">
                     </picture>
-                    <img class="logo__text" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
+                    <img class="logo__text" src="icons/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
                 </a>
                 <nav class="menu-nav menu-nav--nojs">
                     <ul class="menu-nav__list">
@@ -58,7 +58,7 @@
         <section class="hero">
             <div class="container">
                 <div class="hero__inner">
-                    <div class="hero__inner--text-wrapper">
+                    <div class="hero__inner-text-wrapper">
                         <div class="hero__content">
                             <h1 class="hero__title title">Функциональное <br> питание для котов</h1>
                             <p class="hero__text">Занялся собой? Займись котом!</p>
@@ -172,7 +172,7 @@
                             </div>
                             <img id="after" class="image-after" src="images/slider-after-tablet@1x.png" alt="After">
                             <div class="slider">
-                                <div class="slider-handle"></div>
+                                <div role="slider" tabindex="0" class="slider-handle"></div>
                             </div>
                         </div>
                     </div>
@@ -202,31 +202,31 @@
                     <a class="footer__logo-link" href="index.html" aria-label="Логотип Cat Energy">
                         <svg width="132" height="25" role="img" aria-labelledby="logo-title">
                             <title id="logo-title">Cat Energy Logo</title>
-                            <use xlink:href="images/icons/logo-text.svg#logo-text"></use>
+                            <use href="icons/logo-text.svg"></use>
                         </svg>
                     </a>
                 </div>
                 <ul class="social">
                     <li class="social__item">
                         <a class="social__link" href="#" aria-label="Вконтакте">
-                            <svg width="28" height="22">
-                                <use href="images/icons/icon-vk.svg#icon-vk"></use>
+                            <svg id="icon-vk" width="28" height="22">
+                                <use href="icons/icon-vk.svg" width="28" height="22"></use>
                             </svg>
-                            <span class="visually-hidden"> Мы в Контакте</span>
+                            <span class=" visually-hidden"> Мы в Контакте</span>
                         </a>
                     </li>
                     <li class="social__item">
                         <a class="social__link" href="#" aria-label="Ютуб">
-                            <svg width="28" height="22">
-                                <use href="images/icons/icon-youtube.svg#icon-youtube"></use>
+                            <svg id="icon-youtube" width="28" height="22">
+                                <use href="icons/stack.svg#icon-youtube"></use>
                             </svg>
                             <span class="visually-hidden"> Мы в Ютубе</span>
                         </a>
                     </li>
                     <li class="social__item">
                         <a class="social__link" href="#" aria-label="Телеграм">
-                            <svg width="28" height="22">
-                                <use href="images/icons/icon-telegram.svg#icon-telegram"></use>
+                            <svg class="icon-telegram" width="28" height="22">
+                                <use href="icons/stack.svg#icon-telegram"></use>
                             </svg>
                             <span class="visually-hidden"> Мы в Телеграмме</span>
                         </a>
@@ -235,7 +235,7 @@
                 <a class="developer" href="https://htmlacademy.ru/intensive/adaptive" target="blank" rel="noreferrer noopener">
                     <span>HTML Academy</span>
                     <svg class="icon-html-academy" width="27" height="34">
-                        <use href="images/icons/icon-html-academy.svg#icon-html-academy"></use>
+                        <use href="icons/stack.svg#icon-html-academy"></use>
                     </svg>
                 </a>
             </div>
