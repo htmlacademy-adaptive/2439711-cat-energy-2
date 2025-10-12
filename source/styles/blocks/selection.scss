@@ -4,11 +4,12 @@
 
     @media #{$tablet} {
         padding: 42px 40px 54px;
+        transform: translateY(10px);
         margin: 0;
     }
 
     @media #{$desktop} {
-        padding: 60px 0 55px;
+        padding: 51px 0 55px;
     }
 }
 
@@ -24,6 +25,7 @@
         font-size: 20px;
         line-height: 30px;
         padding: 0 20px 66px 40px;
+        transform: translateY(10px);
     }
 
     @media #{$desktop} {
@@ -33,6 +35,7 @@
 
 .selection__wrapper-title {
     margin: 0 0 33px;
+    transform: translateY(17px);
 
     @media #{$desktop} {
         margin: 0;
@@ -63,7 +66,10 @@
     @media #{$desktop} {
         margin-bottom: 76px;
         margin-left: -43px;
+
     }
+
+
 }
 
 .selection__form-title--decor {
@@ -75,11 +81,42 @@
     @media #{$tablet} {
         margin: 0 -40px;
         padding: 0 40px;
+        transform: translate(36px, -13px);
     }
 
     @media #{$desktop} {
         margin-bottom: 75px;
+        transform: translateY(-6px);
     }
+
+
+}
+
+
+.comments-tablet {
+    @media screen and (max-width: 1440px) {}
+
+    @media screen and (max-width: 768px) {
+        transform: translate(39px, -17px);
+    }
+
+    @media screen and (max-width: 320px) {
+        transform: translate(1px, -6px);
+    }
+
+}
+
+.extra-tablet {
+    @media screen and (max-width: 1440px) {}
+
+    @media screen and (max-width: 768px) {
+        transform: translate(39px, 9px);
+    }
+
+    @media screen and (max-width: 320px) {
+        transform: translate(0px, -4px);
+    }
+
 }
 
 .selection__items {
@@ -96,10 +133,21 @@
     }
 }
 
+
+@media screen and (max-width: 320px) {
+
+    .selection__items-connect {
+        transform: translateY(10px);
+
+    }
+}
+
+
 @media #{$tablet} {
     .selection__items-connect {
         padding-top: 42px;
         padding-bottom: 35px;
+
     }
 }
 
@@ -110,16 +158,22 @@
     }
 }
 
+.selection__items-label-email {
+    min-width: 50px;
+}
+
 .container-checkbox {
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 1440px;
     margin: 0 auto;
+    transform: translate(-18px, 20px);
 
     @media #{$tablet} {
         max-width: 1280px;
-        padding-left: 40px;
+        padding-left: 36px;
+        padding-bottom: 14px;
     }
 }
 
@@ -145,19 +199,24 @@
     margin: 10px -20px 9px;
     width: 90%;
     margin: 0 auto;
+    transform: translate(-34px, 11px);
 
     @media #{$tablet} {
         border: 1px solid $grey-secondary;
         margin: 48px 40px 46px;
         padding: 33px 27px 3px 23px;
+        transform: translateY(8px);
 
-        @media #{$desktop} {
-            padding: 33px 10px 0 22px;
-        }
     }
 
     @media #{$desktop} {
         margin: 0;
+        padding: 32px 10px 0 22px;
+    }
+
+    @media screen and (max-width: 320px) {
+        transform: translate(-19px, 11px);
+        width: 125%;
     }
 }
 
@@ -181,6 +240,9 @@
 
     @media #{$desktop} {
         padding-left: 0;
+        transform: translateY(8px);
+
+
     }
 }
 
@@ -203,8 +265,11 @@
 
     @media #{$desktop} {
         margin-right: 0;
+        transform: translate(4px, 9px);
     }
 }
+
+
 
 .selection__items-input--connect {
     padding-right: 40px;
@@ -226,6 +291,7 @@
 
     @media #{$desktop} {
         right: 15px;
+        transform: translateY(11px);
     }
 }
 
@@ -252,6 +318,11 @@
     @media #{desktop} {
         padding-left: 65px;
     }
+
+    @media screen and (max-width: 320px) {
+        width: 110%;
+    }
+
 }
 
 .selection__items-input--radio {
@@ -276,36 +347,36 @@
     }
 }
 
-.selection__items-input--radio:disabled ~ .selection__items-text {
+.selection__items-input--radio:disabled~.selection__items-text {
     color: $text-color-secondary;
     opacity: 0.3;
     cursor: default;
 }
 
-.selection__items-input--radio:not(:disabled):hover ~ .selection__items-text {
+.selection__items-input--radio:not(:disabled):hover~.selection__items-text {
     color: $text-color-secondary;
 }
 
-.selection__items-input--radio:not(:disabled):active ~ .selection__items-text {
+.selection__items-input--radio:not(:disabled):active~.selection__items-text {
     opacity: 0.3;
 }
 
-.selection__items-input--radio:not(:disabled):hover ~ .selection__items-radio,
-.selection__items-input--radio:not(:disabled):focus ~ .selection__items-radio {
+.selection__items-input--radio:not(:disabled):hover~.selection__items-radio,
+.selection__items-input--radio:not(:disabled):focus~.selection__items-radio {
     border-color: $grey-twilight;
 }
 
-.selection__items-input--radio:not(:disabled):active ~ .selection__items-radio {
+.selection__items-input--radio:not(:disabled):active~.selection__items-radio {
     color: $text-color-secondary;
     opacity: 0.3;
 }
 
-.selection__items-input--radio:disabled ~ .selection__items-radio {
+.selection__items-input--radio:disabled~.selection__items-radio {
     opacity: 0.3;
     cursor: default;
 }
 
-.selection__items-input--radio:checked + .selection__items-radio::before {
+.selection__items-input--radio:checked+.selection__items-radio::before {
     content: "";
     width: 13px;
     height: 13px;
@@ -322,16 +393,22 @@
     }
 }
 
-.selection__items-input:focus ~ .selection__icon {
+.selection__items-input:focus~.selection__icon {
     stroke: $green-base;
 }
 
-.selection__items-input--error ~ .selection__icon {
+.selection__items-input--error~.selection__icon {
     stroke: $color-error;
 }
 
 .selection__items-input--error {
     outline: 2px solid $color-error;
+}
+
+@media screen and (max-width: 320px) {
+    .selection__textaria {
+        transform: translateY(17px);
+    }
 }
 
 @media #{$tablet} {
@@ -343,6 +420,7 @@
 @media #{$desktop} {
     .selection__textaria {
         margin: 0;
+        transform: translateY(-18px);
     }
 }
 
@@ -368,6 +446,7 @@
         padding: 11px 20px 15px;
         height: 175px;
         margin: 60px 0 29px;
+        transform: translateY(10px);
     }
 
     @media #{$desktop} {
@@ -402,15 +481,23 @@
     transform: translateX(50px);
 
     @media #{$tablet} {
-        column-gap: 63px;
-        row-gap: 28px;
-        margin: 53px 140px 40px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        margin: 0 auto;
+        display: grid;
+        transform: translate(-28px, 17px);
+        gap: 28px 184px;
+        margin: 42px 141px 45px;
     }
 
     @media #{$desktop} {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        place-items: center;
+        gap: 64px;
         margin: 0 0 42px;
-        column-gap: 73px;
-        transform: translateX(60px);
+        display: grid;
+        transform: translate(17px, -37px);
     }
 }
 
@@ -418,7 +505,6 @@
     position: relative;
     display: block;
     margin-bottom: -5px;
-    padding-left: 45px;
     margin-top: 17px;
     cursor: pointer;
     color: $black;
@@ -426,6 +512,7 @@
     @media #{$tablet} {
         margin: 0;
         padding-left: 0;
+        width: 160px;
     }
 }
 
@@ -448,37 +535,37 @@
     }
 }
 
-.selection__items-input--check:disabled ~ .selection__items-text {
+.selection__items-input--check:disabled~.selection__items-text {
     opacity: 0.3;
     cursor: default;
 }
 
-.selection__items-input--check:not(:disabled):hover ~ .selection__items-text {
+.selection__items-input--check:not(:disabled):hover~.selection__items-text {
     color: $black;
 }
 
-.selection__items-input--check:not(:disabled):active ~ .selection__items-text {
+.selection__items-input--check:not(:disabled):active~.selection__items-text {
     opacity: 0.3;
 }
 
-.selection__items-input--check:not(:disabled):hover ~ .selection__items-check,
-.selection__items-input--check:not(:disabled):focus ~ .selection__items-check {
+.selection__items-input--check:not(:disabled):hover~.selection__items-check,
+.selection__items-input--check:not(:disabled):focus~.selection__items-check {
     border-color: $grey-twilight;
 }
 
-.selection__items-input--check:not(:disabled):active ~ .selection__items-check {
+.selection__items-input--check:not(:disabled):active~.selection__items-check {
     color: $grey-twilight;
     opacity: 0.3;
 }
 
-.selection__items-input--check:disabled ~ .selection__items-check {
+.selection__items-input--check:disabled~.selection__items-check {
     opacity: 0.3;
     cursor: default;
 }
 
-.selection__items-input--check:checked + .selection__items-check {
+.selection__items-input--check:checked+.selection__items-check {
     content: "";
-    background-image: url("../../images/icons/icon-check.svg#icon-check");
+    background-image: url("../../icons/stack.svg#icon-check");
     background-size: 18px 14px;
     background-repeat: no-repeat;
     background-position: center;
@@ -538,4 +625,57 @@
     @media #{$desktop} {
         width: 29%;
     }
+}
+
+
+.selection {
+
+    @media screen and (max-width: 1440px) {}
+
+    @media screen and (max-width: 768px) {
+        height: 1835px;
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 1368px;
+    }
+
+
+
+}
+
+.extra-selection {
+    @media screen and (max-width: 320px) {
+        transform: translateY(44px);
+        height: 256px;
+    }
+
+    @media screen and (max-width: 768px) {}
+
+    @media screen and (max-width: 1440px) {}
+
+
+}
+
+
+
+#weight-label-width-fix,
+#email-width-fix {
+
+    @media #{$desktop} {
+        min-width: 76px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        min-width: 117px;
+    }
+
+    @media screen and (max-width: 320px) {
+        min-width: 61px;
+
+    }
+
+
+
 }
